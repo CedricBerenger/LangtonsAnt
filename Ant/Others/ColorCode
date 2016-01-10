@@ -1,0 +1,15 @@
+Blanc = Vers gauche
+Noir  = Vers droite 
+
+Rouge =	Haut
+Bleu  =	Bas
+Vert  =	Gauche
+Jaune = Droite
+
+White = To Left
+Black = To Right
+
+Red = Top
+Blue = Down
+Green = Left
+Yellow = Right
