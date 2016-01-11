@@ -208,10 +208,14 @@ def main(argv):
     g.paintAll()
     
     
+    antColorCode=pygame.image.load("Others/ColorCodeBig.png")
     label = amstradFont.render("Langton's Ant! (Cedric Berenger) Step=0",1,amstradYellow)
     screen.blit(label,(10,10))
+    screen.blit(antColorCode,(800-150-10,600-185-10))
     
     pygame.display.update()
+    
+    way = 1
     
     pause = 1
     
@@ -232,8 +236,10 @@ def main(argv):
                             exit()
                         if event.key == pygame.K_RIGHT:
                             simulator.iterate()
+                            way = 1
                         if event.key == pygame.K_LEFT:
                             simulator.uniterate()
+                            way = -1
                         if event.key == pygame.K_SPACE:
                             pause = 1 - pause
                         if event.key == pygame.K_UP:
@@ -245,11 +251,15 @@ def main(argv):
                             
                             
             if not pause:
-                simulator.iterate()
+                if way > 0:
+                    simulator.iterate()
+                else:
+                    simulator.uniterate()
                 
+            g.paint()
             label = amstradFont.render("Langton's Ant! (Cedric Berenger) Step="+str(simulator.niter),1,amstradYellow)
             screen.blit(label,(10,10))
-            g.paint()
+            screen.blit(antColorCode,(800-150-10,600-185-10))
             
 if __name__ == "__main__":
     main(sys.argv[1:])

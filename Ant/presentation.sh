@@ -1,8 +1,8 @@
 #! /bin/bash
 clear
 figlet "Complexity of Langton's Ant 2002"
-xdg-open Others/Article/2002-Gajardo-ComplexityOfLangtonAnts.pdf&
-xdg-open Others/ColorCodeBig.png&
+#xdg-open Others/Article/2002-Gajardo-ComplexityOfLangtonAnts.pdf&
+#xdg-open Others/ColorCodeBig.png&
 python LangtonsAnt.py -i Tests/BigDemo.png -s 50
 python LangtonsAnt.py -i Tests/LangtonsAnt.png -s 7
 python LangtonsAnt.py -i Tests/LangtonsAntRandom.png -s 7
