@@ -42,6 +42,30 @@ class Ant:
         
         self.state += 1 if state else -1
         self.state %= 4
+
+    def ungo(self):
+        
+        #Mise à jour de l'état (rotation de l'état courant):
+        
+        state = self.simulator.grid[self.coords]
+        
+        self.state += 1 if state else -1
+        self.state %= 4
+        
+        self.simulator.grid[self.coords] = 1-state
+        
+        #Mise à jour des coordonnées
+        self.old_coords = self.coords
+        x = self.coords[0]
+        y = self.coords[1]
+        if(self.state == 0): y-=1 #Haut
+        if(self.state == 1): x-=1 #Droite
+        if(self.state == 2): y+=1 #Bas
+        if(self.state == 3): x+=1 #Gauche
+        
+        x%=self.simulator.grid.shape[0]
+        y%=self.simulator.grid.shape[1]
+        self.coords = (x,y)
     
 class LangtonsAntSimulator():
     
@@ -57,6 +81,11 @@ class LangtonsAntSimulator():
         self.niter+=1
         for ant in self.ants:
             ant.go()
+            
+    def uniterate(self):
+        self.niter-=1
+        for ant in self.ants:
+            ant.ungo()
             
     def loadPic(self,filename="init_config.png"):
         im = Image.open(filename)
@@ -188,7 +217,9 @@ def main(argv):
     
     while 1:
         
-            step = 0
+            pygame.display.update()
+            label = amstradFont.render("Langton's Ant! (Cedric Berenger) Step="+str(simulator.niter),1,amstradPurple)
+            screen.blit(label,(10,10))
         
             for i in xrange(0,delay+1):
                 pygame.time.delay(1)
@@ -200,7 +231,9 @@ def main(argv):
                         if event.key == pygame.K_q:
                             exit()
                         if event.key == pygame.K_RIGHT:
-                            step = 1
+                            simulator.iterate()
+                        if event.key == pygame.K_LEFT:
+                            simulator.uniterate()
                         if event.key == pygame.K_SPACE:
                             pause = 1 - pause
                         if event.key == pygame.K_UP:
@@ -210,14 +243,13 @@ def main(argv):
                         if event.key == pygame.K_DOWN:
                             delay += 10
                             
-            if not pause or step:
-                pygame.display.update()
-                label = amstradFont.render("Langton's Ant! (Cedric Berenger) Step="+str(simulator.niter),1,amstradPurple)
-                screen.blit(label,(10,10))
+                            
+            if not pause:
                 simulator.iterate()
-                label = amstradFont.render("Langton's Ant! (Cedric Berenger) Step="+str(simulator.niter),1,amstradYellow)
-                screen.blit(label,(10,10))
-                g.paint()
+                
+            label = amstradFont.render("Langton's Ant! (Cedric Berenger) Step="+str(simulator.niter),1,amstradYellow)
+            screen.blit(label,(10,10))
+            g.paint()
             
 if __name__ == "__main__":
     main(sys.argv[1:])
