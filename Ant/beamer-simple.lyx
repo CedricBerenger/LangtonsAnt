@@ -834,6 +834,61 @@ Schéma de fonctionnement d'une porte logique.
 status open
 
 \begin_layout Plain Layout
+Construction de portes logiques: La graine de L'Autoroute.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lorsque la fourmis à terminer son calcul, on l'emprisonne dans l'autoroute
+ pour contrôler sa trajectoire.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graine permettant de générer l'autoroute.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
 Construction de portes logiques: Les briques de bases.
 \end_layout
 
