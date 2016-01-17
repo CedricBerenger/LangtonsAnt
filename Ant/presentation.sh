@@ -9,6 +9,7 @@ python LangtonsAnt.py -i Tests/LangtonsAntRandom.png -s 7
 python LangtonsAnt.py -i Tests/LangtonsAnts.png -s 7
 python LangtonsAnt.py -i Tests/Highway.png
 python LangtonsAnt.py -i Tests/Paths.png
+python LangtonsAnt.py -i Tests/Input_Output.png
 python LangtonsAnt.py -i Tests/Junctions.png
 python LangtonsAnt.py -i Tests/Yes.png
 python LangtonsAnt.py -i Tests/NOT+HighWay.png
