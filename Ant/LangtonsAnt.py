@@ -141,7 +141,8 @@ class Graphics:
         pygame.init()
         self.displayOverlay = True
         self.antColorCode=pygame.image.load("Others/ColorCodeBig.png")
-        self.screen = pygame.display.set_mode((800,600))
+	self.screen = pygame.display.set_mode((1024,768))        
+	#self.screen = pygame.display.set_mode((800,600))
         self.amstradFont = pygame.font.Font("amstrad_cpc464.ttf",12)
         self.simulator = simulator
         self.cellSize = cellsize
