@@ -756,6 +756,24 @@ e et est localisé dans une zone fixe.
  la zone ne peut être fixe.
 \end_layout
 
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Conjecture de l'Autoroute
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Si le support est fini, on conjecture que la fourmis fini toujours par construir
+e l'autoroute.
+\end_layout
+
 \end_deeper
 \begin_layout Separator
 
@@ -776,7 +794,7 @@ Construction de portes logiques: Principe.
 
 \begin_deeper
 \begin_layout Itemize
-Etats d'entrées/sorties codés par les états de cellules: Noir = True.
+Etats d'entrées/sorties codés par les états de cellules.
 \end_layout
 
 \begin_layout Itemize
@@ -878,6 +896,76 @@ Graine permettant de générer l'autoroute.
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Construction de portes logiques: Les entrées / sorties.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Les Entrées se comportes comme des 
+\emph on
+commutateurs
+\emph default
+, orientant la fourmis sur des chemins différents en fonction de l'entrée.
+\end_layout
+
+\begin_layout Itemize
+Les sorties sont à 
+\emph on
+False
+\emph default
+ par défaut.
+ Si la fourmi suit le chemin d'une sortie, elle y écrit 
+\emph on
+True
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Others/Article/Inputs.png
+	width 75page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schéma de fonctionnement des entrées / Sorties.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
