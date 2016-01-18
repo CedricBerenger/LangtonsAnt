@@ -17,6 +17,7 @@ python LangtonsAnt.py -i Tests/AND+HighWay.png
 python LangtonsAnt.py -i Tests/Duplicate.png
 python LangtonsAnt.py -i Tests/Cross.png
 #python LangtonsAnt.py -i "Tests/AND+HighWay Reversed.png"
-python LangtonsAnt.py -i "Tests/XOR.png" -s 2
+python LangtonsAnt.py -i "Tests/XOR.png" -s 3 -p 0
+python LangtonsAnt.py -i "Tests/Reversed_NOT.png"
 python LangtonsAnt.py -i Tests/ThankYou.png -d 30
 figlet "Thank You!"

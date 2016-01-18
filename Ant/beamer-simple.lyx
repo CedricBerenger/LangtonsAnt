@@ -146,14 +146,21 @@ In principle, this file can be redistributed and/or modified under the terms
 \end_layout
 
 \begin_layout Title
-Complexité de la fourmi de Langton
+Complexité de la fourmi de Langton 
+\begin_inset Graphics
+	filename Others/Ant.png
+	height 0.3cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subtitle
 A.
  Gajardo, A.
  Moreira, E.
- Goles (2000)
+ Goles (2002)
 \end_layout
 
 \begin_layout Author
@@ -779,6 +786,59 @@ e l'autoroute.
 
 \end_layout
 
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Objectif: La Fourmi de Langton, un système P-Difficile et Universel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nous allons montrer que la fourmi de Langton est un système P-Complet et
+ capable de Calcul Universel, pour cela:
+\end_layout
+
+\begin_layout Itemize
+Nous allons simuler une machine de Turing (Universalité) ...
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+...
+ Via la simulation d'Automates Cellulaires 1D ...
+\end_layout
+
+\begin_layout Itemize
+...
+ Via l'assemblage de Circuits Booléen (P-Difficulté) ...
+\end_layout
+
+\begin_layout Itemize
+...
+ Via la construction de 
+\emph on
+Portes Logiques
+\emph default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -847,7 +907,7 @@ Vers la Construction de portes logiques: La graine de L'Autoroute.
 
 \begin_deeper
 \begin_layout Itemize
-Lorsque la fourmi à terminé son calcul, on l'emprisonne dans l'autoroute
+Lorsque la fourmi a terminé son calcul, on l'emprisonne dans l'autoroute
  pour contrôler sa trajectoire à l'infini.
 \end_layout
 
@@ -910,12 +970,16 @@ La fourmi calcule en se déplaçant:
 
 \begin_deeper
 \begin_layout Itemize
-L'état des cellules d'entrée modifie la trajectoire de la fourmi.
+L'état des cellules d'entrée modifient la trajectoire de la fourmi.
 \end_layout
 
 \begin_layout Itemize
 Suivant la trajectoire adoptée, la fourmi écrit ou non sur les cellules
- de sortie par défaut à False.
+ de sortie par défaut à 
+\emph on
+False
+\emph default
+.
 \end_layout
 
 \end_deeper
@@ -969,7 +1033,7 @@ Construction de portes logiques: Les entrées / sorties.
 
 \begin_deeper
 \begin_layout Itemize
-Les Entrées se comportes comme des 
+Les Entrées se comportent comme des 
 \emph on
 commutateurs
 \emph default
@@ -1006,7 +1070,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Schéma de fonctionnement des entrées / Sorties.
+Schéma de fonctionnement des Entrées / Sorties.
 \end_layout
 
 \end_inset
@@ -1059,8 +1123,14 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Les croisements A,B,C, la jonction J et les chemin sont les briques de bases
- pour la création de portes logiques.
+Les croisements A,B,C, la jonction J et les chemins sont les briques de
+ bases pour la création de portes logiques.
+ 
+\emph on
+Remarque:
+\emph default
+ B et C permettent l'entrée en 3 et la sortie en 4 sans passer d'abord par
+ 1 et 2.
 \end_layout
 
 \end_inset
@@ -1083,7 +1153,7 @@ Les croisements A,B,C, la jonction J et les chemin sont les briques de bases
 status open
 
 \begin_layout Plain Layout
-Construction des portes logiques: Les schémas de construction.
+Construction des portes logiques: Schémas.
 \end_layout
 
 \end_inset
@@ -1092,6 +1162,22 @@ Construction des portes logiques: Les schémas de construction.
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+Les portes sont 
+\begin_inset Quotes fld
+\end_inset
+
+cablées
+\begin_inset Quotes frd
+\end_inset
+
+ par des chemins.
+\end_layout
+
+\begin_layout Itemize
+Les croisements et les entrées/sorties utilisent les briques de bases.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
@@ -1099,13 +1185,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename Others/Article/GatePaths.png
-	width 75page%
+	width 70page%
 
 \end_inset
 
@@ -1113,8 +1195,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Représentation schématique des portes logique.
- Les flèches représentent le déplacement de la fourmi dans les portes.
+Représentation schématique de portes logiques.
 \end_layout
 
 \end_inset
@@ -1190,7 +1271,7 @@ Construction des portes AND et NOT.
 status open
 
 \begin_layout Plain Layout
-Construction de portes logiques: Cross,Copy, Duplicate.
+Construction de portes logiques: Cross, Copy, Duplicate.
 \end_layout
 
 \end_inset
@@ -1216,7 +1297,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Construction des portes Cross, Copy et Duplicate.
+Construction des portes Cross, Copy (Yes) et Duplicate.
 \end_layout
 
 \end_inset
@@ -1239,7 +1320,7 @@ Construction des portes Cross, Copy et Duplicate.
 status open
 
 \begin_layout Plain Layout
-Construction de circuits booléens
+Assemblage de Circuits Booléens.
 \end_layout
 
 \end_inset
@@ -1288,7 +1369,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Schéma d'assemblage d'une porte XOR (/(/a ^ /b) ^ (a ^ b)).
+Schéma d'assemblage d'une porte XOR:
+\begin_inset Formula $\neg(\neg a\land\neg b)\land\neg(a\land b)$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1316,7 +1401,7 @@ Schéma d'assemblage d'une porte XOR (/(/a ^ /b) ^ (a ^ b)).
 status open
 
 \begin_layout Plain Layout
-Simulation d'automates cellulaires
+Simulation d'automates cellulaires 1D.
 \end_layout
 
 \end_inset
@@ -1326,8 +1411,15 @@ Simulation d'automates cellulaires
 
 \begin_deeper
 \begin_layout Itemize
-La fonction de transition d'une cellule d'un automate cellulaire peu être
- calculée par un circuit booléen fini R.
+Fonction de transition calculée par un circuit booléen fini R.
+\end_layout
+
+\begin_layout Itemize
+Calcul d'un état de l'automate par une cascade de circuits R.
+\end_layout
+
+\begin_layout Itemize
+Chaque ligne calcul un état et augmente le champ d'action (trapèze).
 \end_layout
 
 \begin_layout Standard
@@ -1339,7 +1431,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename Others/Article/CASimulator.png
-	width 90page%
+	width 80page%
 
 \end_inset
 
@@ -1347,8 +1439,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Simulation d'automate cellulaire: Chaque ligne calcule un nouvel état global
- de l'automate.
+Simulation d'un automate cellulaire 1D.
 \end_layout
 
 \end_inset
@@ -1375,7 +1466,7 @@ Simulation d'automate cellulaire: Chaque ligne calcule un nouvel état global
 status open
 
 \begin_layout Plain Layout
-Complexité de la fourmi de Langton
+Conclusion: La Complexité de la fourmi de Langton
 \end_layout
 
 \end_inset
@@ -1412,6 +1503,17 @@ s),
 \begin_layout Itemize
 Il existe des automates cellulaires 1D à état quiescent capable de simuler
  une machine de turing universelle.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Others/Fin.png
+	height 20pheight%
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
