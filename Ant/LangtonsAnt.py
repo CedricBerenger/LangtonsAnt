@@ -139,9 +139,9 @@ class Graphics:
     
     def __init__(self,simulator,cellsize = 4,padding = 2):
         pygame.init()
-        self.displayOverlay = True
+        self.displayOverlay = False
         self.antColorCode=pygame.image.load("Others/ColorCodeBig.png")
-	self.screen = pygame.display.set_mode((1024,768))        
+	self.screen = pygame.display.set_mode((800,600))        
 	#self.screen = pygame.display.set_mode((800,600))
         self.amstradFont = pygame.font.Font("amstrad_cpc464.ttf",12)
         self.simulator = simulator
@@ -151,7 +151,7 @@ class Graphics:
     #Affiche l'overlay rappel des couleurs.
     def paintColorOverlay(self):
         if self.displayOverlay:
-            self.screen.blit(self.antColorCode,(800-150-10,600-185-10))
+            self.screen.blit(self.antColorCode,(800-150-10,600-150-10))
 
     #(Ré)Affiche tout.
     def paintAll(self):
@@ -245,6 +245,7 @@ Options: i is the image path, d is , and s is the size of the cells in pixels.
 -i <"my_image.png">    image to use as initial configuration (file path).
 -d <42>                the delay between two frames (simulator speed).
 -s <42>                the size of the cells of the grid in pixels.
+-p <4>                 the padding between cells.
 
 Image format:
 =============
@@ -272,10 +273,10 @@ def main(argv):
     
     delay = 80                  #Delay entre l'affichage de deux trames (plus le delai est cours, plus la simulation est rapide).
     image = "init_config.png"   #Image pour la configuration initiale.
-    size = 10   #Taille des cellules
-                    
+    size = 10                   #Taille des cellules.
+    padding = 2                 #Padding.
     try:
-        opts, args = getopt.getopt(argv,"hi:d:s:",["ifile=","delay=","size="])
+        opts, args = getopt.getopt(argv,"hi:d:s:p:",["ifile=","delay=","size=","padding="])
     except getopt.GetoptError:
         print_help()
         sys.exit(2)
@@ -287,6 +288,8 @@ def main(argv):
             image = arg
         elif opt in ("-d", "--delay"):
             delay = int(arg)
+        elif opt in ("-p", "--padding"):
+            padding = int(arg)
         elif opt in ("-s", "--size"):
             size = int(arg)
     
@@ -297,7 +300,7 @@ def main(argv):
     simulator = LangtonsAntSimulator((100,100)) #Création d'une grille de simulation (la taille 100x100 n'a pas d'importance)...
     simulator.loadPic(filename=image)           #...Car ici, on crée une nouvelle grille via chargement d'une configuration initiale. 
     
-    g = Graphics(simulator,cellsize=size)       #Création de l'objet graphique (utilise pygame).
+    g = Graphics(simulator,cellsize=size,padding=padding)       #Création de l'objet graphique (utilise pygame).
     g.paintAll()
     
     way = 1                                     #Sens temporel (1=futur/-1=passé)

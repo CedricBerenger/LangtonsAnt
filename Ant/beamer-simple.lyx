@@ -146,7 +146,7 @@ In principle, this file can be redistributed and/or modified under the terms
 \end_layout
 
 \begin_layout Title
-Complexité de la fourmis de Langton
+Complexité de la fourmi de Langton
 \end_layout
 
 \begin_layout Subtitle
@@ -340,7 +340,7 @@ beamerdefaultoverlayspecification{<+->}
 status open
 
 \begin_layout Plain Layout
-La fourmis de Langton: des règles simples...
+La fourmi de Langton: des règles simples...
 \end_layout
 
 \end_inset
@@ -390,7 +390,7 @@ height_special "totalheight"
 status open
 
 \begin_layout Itemize
-Une fourmis évolue sur une grille 2D.
+Une fourmi évolue sur une grille 2D.
 \end_layout
 
 \begin_layout Itemize
@@ -517,7 +517,7 @@ status open
 
 \begin_deeper
 \begin_layout Standard
-La fourmis présente un comportement complexe:
+La fourmi présente un comportement complexe:
 \end_layout
 
 \begin_layout Itemize
@@ -529,7 +529,7 @@ Puis Chaotique,
 \end_layout
 
 \begin_layout Itemize
-Et Finalement Périodique: la fourmis s'enferme dans une 
+Et Finalement Périodique: la fourmi s'enferme dans une 
 \begin_inset Quotes fld
 \end_inset
 
@@ -735,7 +735,7 @@ status open
 
 \end_inset
 
- La trajectoire de la fourmis de Langton est non bornée.
+ La trajectoire de la fourmi de Langton est non bornée.
 \end_layout
 
 \begin_layout Proof
@@ -749,10 +749,10 @@ status open
 
 \end_inset
 
- Si la trajectoire est bornée, alors le comportement de la fourmis est périodiqu
-e et est localisé dans une zone fixe.
+ Si la trajectoire est bornée, alors le comportement de la fourmi est périodique
+ et est localisé dans une zone fixe.
  Pour que le comportement soit périodique, un état doit se répéter.
- Or s'il on considère les coins de la zone, on aboutie à une contradiction:
+ Or s'il on considère les coins de la zone, on aboutit à une contradiction:
  la zone ne peut être fixe.
 \end_layout
 
@@ -770,8 +770,115 @@ Conjecture de l'Autoroute
 \end_layout
 
 \begin_layout Block
-Si le support est fini, on conjecture que la fourmis fini toujours par construir
+Si le support est fini, on conjecture que la fourmi finit toujours par construir
 e l'autoroute.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vers la Construction de portes logiques: Les Chemins.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Les Chemins permettent de contrôler les déplacements de la fourmi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Others/Article/Paths.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemple de chemin.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Vers la Construction de portes logiques: La graine de L'Autoroute.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lorsque la fourmi à terminé son calcul, on l'emprisonne dans l'autoroute
+ pour contrôler sa trajectoire à l'infini.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Others/Article/HighWaySeed.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Graine permettant de générer l'autoroute.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -798,16 +905,16 @@ Etats d'entrées/sorties codés par les états de cellules.
 \end_layout
 
 \begin_layout Itemize
-La fourmis calcule en se déplaçant:
+La fourmi calcule en se déplaçant:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-L'état des cellules d'entrée modifie la trajectoire de la fourmis.
+L'état des cellules d'entrée modifie la trajectoire de la fourmi.
 \end_layout
 
 \begin_layout Itemize
-Suivant la trajectoire adoptée, la fourmis écrit ou non sur les cellules
+Suivant la trajectoire adoptée, la fourmi écrit ou non sur les cellules
  de sortie par défaut à False.
 \end_layout
 
@@ -852,68 +959,6 @@ Schéma de fonctionnement d'une porte logique.
 status open
 
 \begin_layout Plain Layout
-Construction de portes logiques: La graine de L'Autoroute.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Lorsque la fourmis à terminer son calcul, on l'emprisonne dans l'autoroute
- pour contrôler sa trajectoire.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename Others/Article/HighWaySeed.png
-	width 20page%
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Graine permettant de générer l'autoroute.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
 Construction de portes logiques: Les entrées / sorties.
 \end_layout
 
@@ -928,7 +973,7 @@ Les Entrées se comportes comme des
 \emph on
 commutateurs
 \emph default
-, orientant la fourmis sur des chemins différents en fonction de l'entrée.
+, orientant la fourmi sur des chemins différents en fonction de l'entrée.
 \end_layout
 
 \begin_layout Itemize
@@ -1069,7 +1114,7 @@ status open
 
 \begin_layout Plain Layout
 Représentation schématique des portes logique.
- Les flèches représentent le déplacement de la fourmis dans les portes.
+ Les flèches représentent le déplacement de la fourmi dans les portes.
 \end_layout
 
 \end_inset
@@ -1243,7 +1288,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Schéma d'assemblage d'une porte XOR.
+Schéma d'assemblage d'une porte XOR (/(/a ^ /b) ^ (a ^ b)).
 \end_layout
 
 \end_inset
@@ -1330,7 +1375,7 @@ Simulation d'automate cellulaire: Chaque ligne calcule un nouvel état global
 status open
 
 \begin_layout Plain Layout
-Complexité de la fourmis de Langton
+Complexité de la fourmi de Langton
 \end_layout
 
 \end_inset
@@ -1340,7 +1385,7 @@ Complexité de la fourmis de Langton
 
 \begin_deeper
 \begin_layout Itemize
-La fourmis de Langton admet des problèmes P-Difficiles:
+La fourmi de Langton admet des problèmes P-Difficiles:
 \end_layout
 
 \begin_deeper
@@ -1349,12 +1394,12 @@ Le calcul d'un circuit booléen est un problème P-Complet,
 \end_layout
 
 \begin_layout Itemize
-Ce problème se réduit polynomialement à la fourmis de Langton.
+Ce problème se réduit polynomialement à la fourmi de Langton.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-La fourmis de Langton est un Modèle de Calcul Universel (Nécessite un support
+La fourmi de Langton est un Modèle de Calcul Universel (Nécessite un support
  infini):
 \end_layout
 
